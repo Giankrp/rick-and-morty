@@ -14,7 +14,6 @@ export default function Cards({ characters }) {
                origin={origin.name}
                image={image}
                onClose={() => window.alert('Emulamos que se cierra la card')}
-
             ></Card>
 
          })
