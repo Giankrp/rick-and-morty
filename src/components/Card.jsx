@@ -9,7 +9,7 @@ export default function Card({id, name, status, species, gender, origin, image,o
          <h2> Genero: {gender} </h2>
          <h2> Origen: {origin} </h2>
          <img src={image} alt='not Found' /> 
-      </div>
+      </div> 
    );
 }
 
