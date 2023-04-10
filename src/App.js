@@ -2,16 +2,33 @@
 import axios from "axios";
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav.jsx";
-import { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
+import Form from "./components/Form.jsx";
 
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "328bd39ab133.78847851ee9a1c82999a";
+
+const email = "XDADSA@gamil.com";
+const password = "tumama123";
 function App() {
-   
   const [characters, setCharacters] = useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [access, setAccess] = useState(false);
+
+  const login = (userData) => {
+    if (userData.email === email && userData.password === password) {
+      setAccess(true);
+      navigate("/Home");
+    }
+  };
+
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
 
   const onSearch = (id) => {
     axios(`${URL_BASE}/${id}?key=${API_KEY}`).then(({ data }) => {
@@ -31,8 +48,10 @@ function App() {
 
   return (
     <div className="App">
-      <Nav onSearch={onSearch}></Nav>
+      {location.pathname !== "/" ? <Nav onSearch={onSearch}></Nav> : null}
+
       <Routes>
+        <Route path="/" element={<Form login={login}></Form>}></Route>
         <Route
           path="/Home"
           element={<Cards characters={characters} onClose={onClose} />}
