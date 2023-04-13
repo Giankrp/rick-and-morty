@@ -11,7 +11,7 @@ import Form from "./components/Form.jsx";
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "328bd39ab133.78847851ee9a1c82999a";
 
-const email = "XDADSA@gamil.com";
+const email = "tumama@gmail.com";
 const password = "tumama123";
 function App() {
   const [characters, setCharacters] = useState([]);
