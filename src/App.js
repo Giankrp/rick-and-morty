@@ -7,6 +7,7 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import About from "./components/About.jsx";
 import Detail from "./components/Detail.jsx";
 import Form from "./components/Form.jsx";
+import Favorites from "./components/Favorites.jsx";
 
 const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
 const API_KEY = "328bd39ab133.78847851ee9a1c82999a";
@@ -58,6 +59,7 @@ function App() {
         ></Route>
         <Route path="/About" element={<About></About>}></Route>
         <Route path="/Detail/:id" element={<Detail></Detail>}></Route>
+        <Route path="/Favorites" element={<Favorites></Favorites>} ></Route>
       </Routes>
     </div>
   );
