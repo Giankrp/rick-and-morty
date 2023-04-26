@@ -22,7 +22,7 @@ const getCharById = async (req, res) => {
 
     // return res.status(404).send("Not found");
   } catch (error) {
-    return error.nessage.includes("ID")
+    return error.message.includes("ID")
       ? res.status(404).send(error.message)
       : res.status(500).send(error.response.data.error);
   }

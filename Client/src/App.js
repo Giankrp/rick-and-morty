@@ -52,7 +52,7 @@ function App() {
       alert("¡No hay personajes con este ID!");
     }
   };
-}
+
 
 const onClose = (id) => {
   const characterFilter = characters.filter((character) => character.id !== id);
@@ -75,5 +75,5 @@ return (
     </Routes>
   </div>
 );
-
+}
 export default App;

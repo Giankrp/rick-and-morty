@@ -1,0 +1,42 @@
+.Home {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;  
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background-color: #4CAF50;
+    color: #fff;
+    gap: 10px;
+    border-radius: 5px;
+ text-decoration: none;
+    margin: 10px;
+  }
+.Favorites {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background-color: #4CAF50;
+    color: #fff;
+    gap: 10px;
+    margin: 10px;
+    text-decoration: none;
+
+
+}
+.About {
+    padding: 10px 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background-color: #4CAF50;
+    color: #fff;
+    gap: 10px;
+    margin: 10px;
+    text-decoration: none;
+
+  }
