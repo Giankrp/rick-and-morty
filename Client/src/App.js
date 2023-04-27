@@ -44,7 +44,7 @@ function App() {
       const { data } = await axios(
         `http://localhost:3001/rickandmorty/character/${id}`
       );
-
+                               
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
       }
@@ -71,7 +71,7 @@ return (
       ></Route>
       <Route path="/About" element={<About></About>}></Route>
       <Route path="/Detail/:id" element={<Detail></Detail>}></Route>
-      <Route path="/Favorites" element={<Favorites></Favorites>}></Route>
+      <Route path="/Favorites" element={<Favorites onClose={onClose}></Favorites>}></Route>
     </Routes>
   </div>
 );

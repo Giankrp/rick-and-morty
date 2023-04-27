@@ -21,7 +21,7 @@ const Detail = () => {
 
   return (
   <div>
-    <h2>{character?.name} </h2>
+    <h2>{character?.name} </h2> 
     <h2>{character?.status} </h2>
     <h2>{character?.species} </h2>
     <h2>{character?.gender} </h2>
